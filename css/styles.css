@@ -142,4 +142,8 @@ footer {
   h1{
     font-size: 40px;
   }
+
+  .house{
+    display: inline-block;
+  }
 }
