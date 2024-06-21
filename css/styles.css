@@ -1,0 +1,145 @@
+:root{
+  --mainFont: 'Harry Potter', sans-serif;
+  --secundaryFont: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --mainColor: white;
+  --hpColor: #d19824;
+}
+
+body {
+  font-family: var(--secundaryFont);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(/assets/1366_2000.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--mainColor);
+}
+
+h1{
+  font-size: 50px;
+}
+
+h2{
+  font-size: 35px;
+}
+
+h1,h2,h4{
+  font-family: var(--mainFont);
+  color: var(--hpColor);
+}
+
+h4{
+  font-size: 30px;
+}
+
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 0.1em 0;
+  font-size: 25px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  text-align: center;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+#grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#grid div{
+  width: 70%;
+  margin: auto;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  color: white;
+}
+
+#grid div img{
+  height: 200px;
+  width: 150px;
+  margin-top: 25px;
+}
+
+.intro p, #grid div, .content{
+  color: var(--mainColor);
+  box-shadow: 0 0 25px #222;
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
+}
+/*Styles index*/
+.intro p{
+  padding: 15px;
+  color: var(--mainColor);
+}
+
+#IndexMain img{
+  width: 150px;
+  max-height: 200px;
+}
+
+.house{
+  margin: 50px 0 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content{
+  padding: 10px 40px;
+  margin: 20px;
+}
+
+@media (max-width: 880px){
+  
+  #grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px){
+  #grid{
+    display: inline-block;
+  }
+
+  .intro p{
+    margin: 0 20px
+  }
+
+  h1{
+    font-size: 40px;
+  }
+}
