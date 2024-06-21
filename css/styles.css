@@ -145,5 +145,6 @@ footer {
 
   .house{
     display: inline-block;
+    margin-bottom: 60px;
   }
 }
