@@ -28,6 +28,37 @@ const houses = [
   }
 ];
 
+const hechizos = [
+  {
+    name: "Expelliarmus",
+    description: "Este hechizo desarma al oponente, haciendo que su varita sea arrojada lejos de él."
+  },
+  {
+    name: "Wingardium Leviosa",
+    description: "Con este hechizo, se puede hacer flotar objetos en el aire.."
+  },
+  {
+    name: "Expecto Patronum",
+    description: "Este hechizo crea una manifestación física del pensamiento más positivo y feliz del conjurador, conocido como un Patronus, que puede repeler a los Dementores y otros seres malignos."
+  },
+  {
+    name: "Lumos",
+    description: "Enciende la punta de la varita para iluminar el área circundante."
+  },
+  {
+    name: "Avada Kedavra",
+    description: "También conocido como la Maldición Asesina, este es uno de los Tres Hechizos Imperdonables y causa la muerte instantánea al objetivo."
+  },
+  {
+    name: "Accio",
+    description: "Utilizado para convocar objetos específicos hacia el conjurador."
+  },
+  {
+    name: "Crucio",
+    description: "Crucio es una de las maldiciones imperdonables más temidas y oscuras en el mundo de Harry Potter. Su objetivo principal es infligir un intenso dolor a la víctima, tanto físico como emocional."
+  }
+];
+
 fetch("https://hp-api.onrender.com/api/characters")
   .then((respuesta) => {
     return respuesta.json();
@@ -62,4 +93,13 @@ fetch("https://hp-api.onrender.com/api/characters")
       <div class= content> <h2>${house.name}</h2>
         <p>${house.description}</p> </div>
     </section>`
-  })
+  });
+
+  $index.innerHTML += `<hr><h2 class="h2Hechizo" >Hechizos</h2>`
+
+  hechizos.forEach((hechizo) => {
+    $index.innerHTML += `<section class="hechizo">
+      <h4>${hechizo.name}</h4>
+      <p>${hechizo.description}</p>
+    </section>` 
+  });
